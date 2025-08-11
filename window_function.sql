@@ -32,7 +32,7 @@ sales,
 LAG(sales) OVER (ORDER BY month) AS prev_month_sales
 FROM sales;
 
--LEAD
+--LEAD
 SELECT
 month,
 sales,
