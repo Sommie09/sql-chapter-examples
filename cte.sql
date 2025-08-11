@@ -19,3 +19,11 @@ WITH avg_order AS (
   SELECT AVG(total_amount) AS average_amount
   FROM orders
 )
+
+SELECT *
+FROM orders, avg_order
+WHERE orders.total_amount > avg_order.average_amount;
+
+SELECT COUNT(*)
+FROM orders, avg_order
+WHERE orders.total_amount > avg_order.average_amount;
